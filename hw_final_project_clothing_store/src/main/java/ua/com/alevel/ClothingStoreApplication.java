@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerA
 import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;
-import org.springframework.data.elasticsearch.core.ElasticsearchOperations;
+//import org.springframework.data.elasticsearch.core.ElasticsearchOperations;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 //import ua.com.alevel.cron.SyncElasticCronService;
 //import ua.com.alevel.elastic.document.ClothesIndex;
@@ -28,14 +28,14 @@ public class ClothingStoreApplication {
     private final BCryptPasswordEncoder encoder;
     private final AdminRepository adminRepository;
     private final TokenRepository tokenRepository;
-    private final ElasticsearchOperations elasticsearchOperations;
+//    private final ElasticsearchOperations elasticsearchOperations;
 //    private final SyncElasticCronService syncElasticCronService;
 
-    public ClothingStoreApplication(BCryptPasswordEncoder encoder, AdminRepository adminRepository, TokenRepository tokenRepository, ElasticsearchOperations elasticsearchOperations) {
+    public ClothingStoreApplication(BCryptPasswordEncoder encoder, AdminRepository adminRepository, TokenRepository tokenRepository) {
         this.encoder = encoder;
         this.adminRepository = adminRepository;
         this.tokenRepository = tokenRepository;
-        this.elasticsearchOperations = elasticsearchOperations;
+//        this.elasticsearchOperations = elasticsearchOperations;
 //        this.syncElasticCronService = syncElasticCronService;
     }
 
